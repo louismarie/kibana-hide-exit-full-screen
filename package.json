@@ -1,21 +1,21 @@
 {
   "name": "kibana_hide_exit_full_screen",
-  "version": "0.0.0",
+  "version": "7.5.0-1",
   "description": "Hide exit full screen",
   "main": "index.js",
   "kibana": {
-    "version": "7.5.1",
+    "version": "kibana",
     "templateVersion": "1.0.0"
   },
   "scripts": {
-    "preinstall": "node ../../preinstall_check",
-    "kbn": "node ../../scripts/kbn",
-    "es": "node ../../scripts/es",
+    "preinstall": "node ../kibana/preinstall_check",
+    "kbn": "node ../kibana/scripts/kbn",
+    "es": "node ../kibana/scripts/es",
     "lint": "eslint .",
-    "start": "plugin-helpers start",
-    "test:server": "plugin-helpers test:server",
-    "test:browser": "plugin-helpers test:browser",
-    "build": "plugin-helpers build"
+    "start": "../kibana/packages/kbn-plugin-helpers/bin/plugin-helpers.js start",
+    "test:server": "../kibana/packages/kbn-plugin-helpers/bin/plugin-helpers.js test:server",
+    "test:browser": "../kibana/packages/kbn-plugin-helpers/bin/plugin-helpers.js test:browser",
+    "build": "../kibana/packages/kbn-plugin-helpers/bin/plugin-helpers.js build"
   },
   "devDependencies": {
     "@elastic/eslint-config-kibana": "link:../../packages/eslint-config-kibana",
