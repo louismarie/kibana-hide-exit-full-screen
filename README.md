@@ -1,0 +1,1 @@
+# kibana-hide-exit-full-screen
